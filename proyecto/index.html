@@ -1,15 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
-    <script src="js/data.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/events.js"></script>
+    <div id="web">
+
+        <aside id="barra-lateral">
+
+            <div id="logo-barra-lateral">
+                <h1>LaLiga</h1>
+                <p>temporada 23/24</p>
+            </div>
+
+            <nav id="navegador-lateral">
+                <button data-target="seccion-equipos">Equipos</button>
+                <button data-target="seccion-jugadores">Jugadores</button>
+                <button data-target="seccion-partidos">Partidos</button>
+                <button data-target="seccion-estadisticas">Estadísticas</button>
+            </nav>
+
+        </aside>
+
+
+
+
+        <main id="principal">
+            <section id="seccion-equipos">
+                <h2>Listado de equipos</h2>
+                <label for="filtro-equipo-nombre">Filtrar</label>
+                <input type="text" id="filtro-equipo-nombre" placeholder="filtar por nombre o ciudad">
+                <div id="panel-detalles"></div>
+                <div id="contenedor-equipos">
+                    
+
+                </div> <!--  se deja vacio para rellenar con js-->
+
+            </section>
+
+            <section id="seccion-jugadores">
+                <h2>Buscador de jugadores </h2>
+                <label for="filtro-nombre">Filtrar por nombre: </label>
+                <input id="buscar-jugador" type="text" placeholder="buscar por nombre">
+
+                <label for="filtro-equipo">Filtrar por equipo:</label>
+                <select id="filtro-equipo">
+                    <option value="">Todos los equipos</option>
+                    <option value="Real Madrid CF">Real Madrid CF</option>
+                    <option value="FC Barcelona">FC Barcelona</option>
+                    <option value="Atlético de Madrid">Atlético de Madrid</option>
+                    <option value="Real Sociedad">Real Sociedad</option>
+                    <option value="Athletic Club">Athletic Club</option>
+                    <option value="Girona FC">Girona FC</option>
+                    <option value="Real Betis">Real Betis</option>
+                    <option value="Sevilla FC">Sevilla FC</option>
+                    <option value="Valencia CF">Valencia CF</option>
+                    <option value="Villarreal CF">Villarreal CF</option>
+                </select>
+
+                <div id="botones-ordenar">
+                    <button id="boton-ordenar-nombre">Nombre</button>
+                    <button id="boton-ordenar-dorsal">Dorsal</button>
+                    <button id="boton-ordenar-equipo">Equipo</button>
+                </div>
+                <div id="contenedor-jugadores"></div> <!--  se deja vacio para rellenar con js-->
+
+            </section>
+
+            <section id="seccion-partidos">
+                <h2>Partidos</h2>
+
+
+                <label for="filtro-por-jornada">Jornadas</label>
+                <select id="filtro-por-jornada">
+                    <option>todas las jornadas</option>
+                    <option value="1">Jornada 1</option>
+                    <option value="2">Jornada 2</option>
+                </select>
+
+                <div id="lista-partidos"></div> <!--  se deja vacio para rellenar con js-->
+            </section>
+
+            <section id="seccion-estadisticas">
+                <h2>Estadisticas Globales</h2>
+                <h3>Mayores goleadores</h3>
+                <div id="grafica-estadisticas"></div> <!--  se deja vacio para rellenar con js-->
+
+
+            </section>
+
+        </main>
+        <footer>
+            <p>Trabajo grupal LGSM 3ª EV Alex Stoica, Adrian Doñate, Hugo Alvarez</p>
+        </footer>
+        <script src="js/data.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/events.js"></script>
+    </div>
 </body>
+
 </html>
