@@ -1,1 +1,42 @@
-[]
+[
+    {
+        "nombre": "Vinícius Júnior",
+        "dorsal": 7,
+        "equipo": "Real Madrid CF"
+    },
+    {
+        "nombre": "Lamine Yamal",
+        "dorsal": 27,
+        "equipo": "FC Barcelona"
+    },
+    {
+        "nombre": "Robert Lewandowski",
+        "dorsal": 9,
+        "equipo": "FC Barcelona"
+    },
+    {
+        "nombre": "Antoine Griezmann",
+        "dorsal": 7,
+        "equipo": "Atlético de Madrid"
+    },
+    {
+        "nombre": "Takefusa Kubo",
+        "dorsal": 14,
+        "equipo": "Real Sociedad"
+    },
+    {
+        "nombre": "Nico Williams",
+        "dorsal": 11,
+        "equipo": "Athletic Club"
+    },
+    {
+        "nombre": "Artem Dovbyk",
+        "dorsal": 9,
+        "equipo": "Girona FC"
+    },
+    {
+        "nombre": "Gerard Moreno",
+        "dorsal": 7,
+        "equipo": "Villarreal CF"
+    }
+]

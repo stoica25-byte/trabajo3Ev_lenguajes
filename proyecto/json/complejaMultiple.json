@@ -1,1 +1,42 @@
-[]
+[
+
+    {
+        "jornada": 1,
+        "fecha": "2024-02-10",
+        "equipo_local": "Real Madrid CF",
+        "goles_local": 4,
+        "goles_visitante": 0,
+        "equipo_visitante": "Girona FC"
+    },
+
+
+    {
+        "jornada": 1,
+        "fecha": "2024-02-11",
+        "equipo_local": "FC Barcelona",
+        "goles_local": 1,
+        "goles_visitante": 0,
+        "equipo_visitante": "Sevilla FC"
+    },
+
+
+    {
+        "jornada": 2,
+        "fecha": "2024-02-17",
+        "equipo_local": "Atlético de Madrid",
+        "goles_local": 5,
+        "goles_visitante": 0,
+        "equipo_visitante": "Villarreal CF"
+    },
+    
+    
+    {
+        "jornada": 2,
+        "fecha": "2024-02-18",
+        "equipo_local": "Valencia CF",
+        "goles_local": 2,
+        "goles_visitante": 2,
+        "equipo_visitante": "Real Madrid CF"
+    }
+    
+]

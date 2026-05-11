@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "jugador": "Jude Bellingham",
+        "equipo": "Real Madrid CF",
+        "goles_totales": 2
+    },
+    {
+        "jugador": "Vinícius Júnior",
+        "equipo": "Real Madrid CF",
+        "goles_totales": 1
+    },
+    {
+        "jugador": "Robert Lewandowski",
+        "equipo": "FC Barcelona",
+        "goles_totales": 1
+    },
+    {
+        "jugador": "Antoine Griezmann",
+        "equipo": "Atlético de Madrid",
+        "goles_totales": 2
+    }
+]

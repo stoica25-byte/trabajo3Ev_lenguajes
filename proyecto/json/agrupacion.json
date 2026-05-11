@@ -1,1 +1,121 @@
-[]
+[
+    {
+        "equipo": "Real Madrid CF",
+        "fundacion": 1902,
+        "jugadores": [
+            {
+                "nombre": "Vinícius Júnior",
+                "posicion": "Delantero",
+                "dorsal": 7
+            },
+            {
+                "nombre": "Jude Bellingham",
+                "posicion": "Centrocampista",
+                "dorsal": 5
+            }
+        ]
+    },
+    {
+        "equipo": "FC Barcelona",
+        "fundacion": 1899,
+        "jugadores": [
+            {
+                "nombre": "Lamine Yamal",
+                "posicion": "Delantero",
+                "dorsal": 27
+            },
+            {
+                "nombre": "Robert Lewandowski",
+                "posicion": "Delantero",
+                "dorsal": 9
+            }
+        ]
+    },
+    {
+        "equipo": "Atlético de Madrid",
+        "fundacion": 1903,
+        "jugadores": [
+            {
+                "nombre": "Antoine Griezmann",
+                "posicion": "Delantero",
+                "dorsal": 7
+            },
+            {
+                "nombre": "Koke Resurrección",
+                "posicion": "Centrocampista",
+                "dorsal": 6
+            }
+        ]
+    },
+    {
+        "equipo": "Real Sociedad",
+        "fundacion": 1909,
+        "jugadores": [
+            {
+                "nombre": "Takefusa Kubo",
+                "posicion": "Delantero",
+                "dorsal": 14
+            }
+        ]
+    },
+    {
+        "equipo": "Athletic Club",
+        "fundacion": 1898,
+        "jugadores": [
+            {
+                "nombre": "Nico Williams",
+                "posicion": "Delantero",
+                "dorsal": 11
+            }
+        ]
+    },
+    {
+        "equipo": "Girona FC",
+        "fundacion": 1930,
+        "jugadores": [
+            {
+                "nombre": "Artem Dovbyk",
+                "posicion": "Delantero",
+                "dorsal": 9
+            }
+        ]
+    },
+    {
+        "equipo": "Real Betis",
+        "fundacion": 1907,
+        "jugadores": [
+            {
+                "nombre": "Isco Alarcón",
+                "posicion": "Centrocampista",
+                "dorsal": 22
+            }
+        ]
+    },
+    {
+        "equipo": "Sevilla FC",
+        "fundacion": 1890,
+        "jugadores": [
+            {
+                "nombre": "Jesús Navas",
+                "posicion": "Defensa",
+                "dorsal": 16
+            }
+        ]
+    },
+    {
+        "equipo": "Valencia CF",
+        "fundacion": 1919,
+        "jugadores": null
+    },
+    {
+        "equipo": "Villarreal CF",
+        "fundacion": 1923,
+        "jugadores": [
+            {
+                "nombre": "Gerard Moreno",
+                "posicion": "Delantero",
+                "dorsal": 7
+            }
+        ]
+    }
+]
