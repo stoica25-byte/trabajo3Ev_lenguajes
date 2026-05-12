@@ -81,6 +81,7 @@ function Dom_Jugadores(listaJugadores) {
         const tarjeta = document.createElement('article');
         tarjeta.classList.add('tarjeta-jugador');
 
+
         const nombre = document.createElement('h4');
         nombre.textContent = jugador.nombre;
 

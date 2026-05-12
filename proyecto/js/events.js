@@ -88,4 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
         Dom_Equipos(equipos);
     });
 
+    //FILTROS JUGADORES //
+
+    const buscadorNombre = document.querySelector('#buscar-jugador');
+    const contenedor = document.querySelector('#contenedor-jugadores');
+
+    buscadorNombre.addEventListener('change', (evento) =>{
+        const equipoSeleccionado = evento.target.value;
+
+        if (equipoSeleccionado === 'Todos los equipos' ){
+            Dom_Jugadores(datosJugadores);
+        }else{
+            const jugadoresFiltrados = datosJugadores.filter( jugador =>{
+                const equipoDelJugador = jugador.equipo;
+                return equipoDelJugador === equipoSeleccionado;
+            });
+            Dom_Jugadores(jugadoresFiltrados);
+        }
+
+
+
+    });
+    
+
 });
