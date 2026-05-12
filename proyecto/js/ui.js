@@ -5,7 +5,7 @@ function Dom_Equipos(listaEquipos) {
 
     elementos_equipos.textContent = '';
 
-    listaEquipos.forEach(element => {
+    listaEquipos.forEach(equipo => {
         const nuevoArticulo = document.createElement('article');
         nuevoArticulo.classList.add('tarjeta-equipo');
 
@@ -30,6 +30,45 @@ function Dom_Equipos(listaEquipos) {
         elementos_equipos.appendChild(nuevoArticulo);
     });
 
+}
+
+// js/ui.js
+
+function Dom_Panel_Detalles(equipoAgrupado) {
+    const panel = document.getElementById('panel-detalles');
+    panel.textContent = ''; // Limpiar
+
+    
+    const titulo = document.createElement('h3');
+    titulo.textContent = 'Plantilla del ' + equipoAgrupado.equipo;
+    panel.appendChild(titulo);
+
+    
+    const fundacion = document.createElement('p');
+    fundacion.innerHTML = `<em>Fundado en ${equipoAgrupado.fundacion}</em>`;
+    panel.appendChild(fundacion);
+    
+    // 2. Lista de jugadores
+    const listaJugadores = document.createElement('ul');
+
+    equipoAgrupado.jugadores.forEach(jugador => {
+        const elementoLista = document.createElement('li');
+        elementoLista.textContent = jugador.nombre + ' - ' + jugador.posicion + ' (Dorsal ' + jugador.dorsal + ')';
+        listaJugadores.appendChild(elementoLista);
+    });
+
+    panel.appendChild(listaJugadores);
+
+    // 3. Botón para cerrar
+    const btnCerrar = document.createElement('button');
+    btnCerrar.textContent = 'Cerrar Detalles';
+    btnCerrar.addEventListener('click', () => {
+        panel.style.display = 'none';
+    });
+    panel.appendChild(btnCerrar);
+
+    // 4. Mostrar el panel
+    panel.style.display = 'block';
 }
 
 
