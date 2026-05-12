@@ -90,25 +90,103 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //FILTROS JUGADORES //
 
-    const buscadorNombre = document.querySelector('#buscar-jugador');
-    const contenedor = document.querySelector('#contenedor-jugadores');
+    //filtrar por equipo//
+    const SelectEquipos = document.querySelector('#filtro-equipo');
 
-    buscadorNombre.addEventListener('change', (evento) =>{
+    SelectEquipos.addEventListener('change', (evento) =>{
         const equipoSeleccionado = evento.target.value;
-
+        
         if (equipoSeleccionado === 'Todos los equipos' ){
             Dom_Jugadores(datosJugadores);
+            
         }else{
             const jugadoresFiltrados = datosJugadores.filter( jugador =>{
                 const equipoDelJugador = jugador.equipo;
+                
                 return equipoDelJugador === equipoSeleccionado;
+
             });
             Dom_Jugadores(jugadoresFiltrados);
         }
 
-
+        
+        
 
     });
-    
 
+    //filtrar por Nombre//
+    const InputNombre = document.querySelector('#buscar-jugador');
+    
+    InputNombre.addEventListener('input',(evento)=>{
+        const busqueda= evento.target.value.toLowerCase();
+
+        const JugadorFiltrado = datosJugadores.filter( jugador => {
+
+            const nombreDelJugador = jugador.nombre.toLowerCase();
+
+            return nombreDelJugador.includes(busqueda);
+        });
+        Dom_Jugadores(JugadorFiltrado)
+    });
+
+    //ordenar por nombre (a-z)//
+
+    const botonNombre = document.querySelector('#boton-ordenar-nombre');
+
+    botonNombre.addEventListener('click', (evento) =>{
+        
+        const datosOrdenados = [...datosJugadores].sort((a,b)=> {
+            return a.nombre.localeCompare(b.nombre);
+            
+        });
+
+        Dom_Jugadores(datosOrdenados);
+        
+
+    });
+
+    //ordenar por dorsal menor a mayor//
+
+    const botonDorsal = document.querySelector('#boton-ordenar-dorsal');
+
+    botonDorsal.addEventListener('click',(evento)=>{
+        const datosOrdenados = [...datosJugadores].sort((a,b)=> a.dorsal -b.dorsal);
+        Dom_Jugadores(datosOrdenados);
+    });
+
+    //ordenar por equipo (a-z)//
+
+    const botonEquipo = document.querySelector('#boton-ordenar-equipo');
+
+    botonEquipo.addEventListener('click', (evento) =>{
+        
+        const datosOrdenados = [...datosJugadores].sort((a,b)=> {
+            return a.equipo.localeCompare(b.equipo);
+        });
+        
+        
+        Dom_Jugadores(datosOrdenados);
+        
+
+    });
+
+    //FILTRO JORNADAS//
+
+    const selectJornadas = document.querySelector('#filtro-por-jornada');
+
+    selectJornadas.addEventListener('change',(evento)=>{
+        const jornadaSeleccionada = evento.target.value;
+
+        if (jornadaSeleccionada === 'todas las jornadas'){
+            Dom_Partidos(datosPartidos);
+        }else {
+            const JornadaFiltrada = datosPartidos.filter(partidos =>{
+                const jornada = partidos.jornada;
+
+                return jornada == jornadaSeleccionada;
+            });
+
+            Dom_Partidos(JornadaFiltrada);
+        }
+    });
 });
