@@ -67,3 +67,24 @@ body {
 .tarjeta-jugador p strong {
     color: #111827;
 }
+
+/* Estilos para las imágenes de sección */
+.imagen-seccion {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Imágenes más pequeñas para jugadores y partidos */
+#seccion-jugadores .imagen-seccion,
+#seccion-partidos .imagen-seccion {
+    max-width: 400px;
+}
+
+
+
+
