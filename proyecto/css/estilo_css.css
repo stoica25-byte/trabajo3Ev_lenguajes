@@ -1,61 +1,57 @@
-/* 1. Reset básico para que los navegadores no molesten con sus márgenes por defecto */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Estilos generales del cuerpo */
+
 body {
-    /* Una fuente segura y un fondo clarito para que no duela a la vista */
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f2f5;
     color: #333;
     padding: 20px;
 }
 
-/* 3. Contenedores principales */
-/* Usamos Flexbox porque es más fácil que estar con floats o grid para esto */
+
+
 #contenedor-equipos, 
 #contenedor-jugadores {
     display: flex;
-    flex-wrap: wrap; /* Para que bajen de línea si no caben */
-    gap: 20px; /* Espacio entre tarjetas sin usar margin */
-    justify-content: center; /* Centradito queda mejor */
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-/* 4. Estilos de las tarjetas (Articles) */
+
 .tarjeta-equipo, 
 .tarjeta-jugador {
     background-color: #ffffff;
     border: 1px solid #d1d5db;
-    border-radius: 8px; /* Bordes redondeados típicos */
+    border-radius: 8px; 
     padding: 15px;
-    width: 280px; /* Ancho fijo para que todas queden iguales */
+    width: 280px;
     
-    /* Una sombra suave para dar efecto de "carta" */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     
-    /* Transición para el hover de abajo */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s;
 }
 
-/* Efecto chulo al pasar el ratón (esto siempre sube nota) */
 .tarjeta-equipo:hover, 
 .tarjeta-jugador:hover {
-    transform: translateY(-5px); /* Se levanta un poco */
-    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.15); /* La sombra se hace más grande */
+    transform: translateY(-5px);
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
-/* 5. Estilos de los textos dentro de las tarjetas */
+
 .tarjeta-equipo h3, 
 .tarjeta-jugador h4 {
-    color: #1a56db; /* Un azul genérico para los títulos */
+    color: #1a56db; 
     margin-bottom: 10px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #e5e7eb; /* Una línea separadora */
+    border-bottom: 2px solid #e5e7eb; 
     text-align: center;
 }
 
@@ -63,10 +59,9 @@ body {
 .tarjeta-jugador p {
     font-size: 14px;
     margin-bottom: 8px;
-    line-height: 1.5; /* Para que el texto respire un poco */
+    line-height: 1.5; 
 }
 
-/* Pequeño detalle: poner en negrita la primera palabra (ej: "Estadio:") */
 .tarjeta-equipo p strong,
 .tarjeta-jugador p strong {
     color: #111827;
