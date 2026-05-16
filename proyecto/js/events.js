@@ -2,28 +2,28 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. ESTADO INICIAL (Al abrir la página) ---
+    
     const secciones = document.querySelectorAll('main section');
 
-    // Apagamos todas las secciones
+    
     secciones.forEach(sec => {
         sec.style.display = 'none';
     });
 
-    // Encendemos solo la sección principal (Equipos)
+    
     document.getElementById('seccion-equipos').style.display = 'block';
 
-    // Pintamos los datos de los equipos por defecto
+    
     Dom_Equipos(datosEquipos);
 
 
-    // GESTIÓN DEL MENÚ LATERAL //
+    // GESTIÓN DEL MENÚ  //
     const botonesMenu = document.querySelectorAll('#navegador-lateral button');
     
     botonesMenu.forEach(boton => {
         boton.addEventListener('click', () => {
             
-            // a) Leemos a dónde quiere ir el usuario
+            
             const destino = boton.dataset.target;
 
             // b) Ocultamos todas las secciones
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 sec.style.display = 'none';
             });
 
-            // c) Mostramos la sección correcta
+            
             const seccionDestino = document.getElementById(destino);
             seccionDestino.style.display = 'block';
 
-            // d) Pintamos los datos correspondientes según la sección
+            
             if (destino === 'seccion-equipos') {
                 Dom_Equipos(datosEquipos);
             }
